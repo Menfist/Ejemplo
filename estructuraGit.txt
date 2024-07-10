@@ -1,0 +1,172 @@
+
+    GeneralesCuentaGitHub.txt     Descripciones de la cuenta en servidor GitHub
+
+                cuenta de correo
+                    mi.cuenta.correo.en@gmail.com
+
+                nombre del repositorio github
+                    repositorioMartin
+                    repositorioDeMartin
+                    repoMartin
+					
+				nombre del usuario
+					Martín Cordero
+
+                password
+                    08Julio2024
+                    dosTacosDeSuaderoConTodo
+
+
+                direcion de mi reposirtorio publico
+
+                    https://github.com/miRepositorioGit/Prueba.git
+
+                Procedimiento para inicializar repositorio
+                    echo "# Repositorio ejemplo" >> README.md
+                    git init
+                    git add README.md
+                    git commit -m "first commit"
+                    git remote add origin https://github.com/miRepositorioGit/ejemploRepositorio.git
+                    git push -u origin master
+
+                Procedimiento para actualizar repositorio remoto
+                    git remote add origin https://github.com/miRepositorioGit/ejemploRepositorio.git
+                    git branch -M master
+                    git push -u origin master
+	
+	
+	Preparación del entorno de trabajo	Descripción de procedimientos para:
+		1)Configuraración global de la cuenta en repositorio local.
+		2)Visialización de las área de trabajo del GIT.
+		3)Inicialización del repositorio LOCAL.
+		4)Actualización de contenidos de los repositorio LOCAL y REMOTO. 
+		5)Salto/recuperación de versiones.
+
+	1	Muestra como identificar con credenciales GIT, usuario-email 
+		para el repositorio local.
+		
+	
+		Configuración global.
+			configuración de identificación-usuario
+					$git config --global user.name "Martín Cordero"
+					$git config --global user.name
+			
+			configuración de identificación-correo electrónico
+					$git config --global user.email "mi.cuenta.correo.en@gmail.com"
+					$git config --global user.email
+					
+	2	Muestra como están relacinados las área de trabajo del repositorio local 
+		y remoto, con comandos GIT.
+	
+		Visualización del área de trabajo local
+	 
+			Se tiene que git contiene TRES áreas de trabajo
+			
+					  1de3                         2de3                           3de3
+				WORKING_DIRECTORY -> git add -> STAGING_AREA -> git commit -> LOCAL_REPOSITORY
+				
+			donde:
+					WORKING_DIRECTORY es el folder/carpeta que contiene los archivos del proyecto.
+					STAGING_AREA -área de preámbulo- 	
+					LOCAL_REPOSITORY  es el folder/carpeta que contiene las claves -hash-,  y los 
+								archivos previos al repositorio remoto, que forman los puntos de guardar el estado.
+								
+	3	Muestra como inicializar el repositorio local. 
+	
+		Inicialización del WORKING_DIRECTORY
+						$git init
+						$git status						<- muestra estado de los archivos/carpetas
+	
+	4	Muestra como a				
+		Actualización del STAGING_AREA
+						$git add .						<- actualiza todos los archivos.
+						$git add -a						<- actualiza todos los archivos.
+						$git add fileName.ext			<- actualiza un archivo.
+								
+						$git rm --rm fileName.ext		<- remueve archivo del área de preámbulo. 				
+						
+		Actualización del LOCAL_REPOSITORY
+						$git commit -m "actualizo redacción y ortografía del README"    <- actualiza estado y genera hash
+						$git log 
+								"actualizo redacción y ortografía del README"			<- mensaje de los cambios,
+								commit eff8889f839d9f1c75517b418ca92196308a2ebb         <- hash, 
+								Author: Martín Cordero <mi.cuenta.correo.en@gmail.com>  <- autor y fecha.
+								Date:   Sat Jul 6 15:35:28 2024 -0600
+		
+		Actualización del REPOSITORIO REMOTO.
+						git push -u origin master
+
+
+	5	
+		Recuperación de versiones funcionales anteriores
+						$git checkout eff8889f839d9f1c75517b418ca92196308a2ebb
+
+		Recuperación de la última versión
+						$git checkout master
+						
+		Clonar un repositorio existente y mostrarlo en el repositorio local
+						$git clone https://github.com/miRepositorioGit/bareBones.git <-dirección URL del repositorio fuente
+						
+
+
+	########################################################################################################################
+
+	Crear una organización
+	
+		Organization account name
+				GrupoTabajoDesarrolloSoftware
+		
+	contact email
+				mi.cuenta.correo.en@gmail.com
+	
+	[*]  a business o institution
+			Name of business 
+					GrupoTabajoDesarrolloSoftware
+		
+	[Next]
+			
+	Add organization members
+	
+		usenameGuest, ...
+		
+	[complete setup]
+
+		Del menu principal.  Creamos un repositorio.  Para la organización.
+		
+		[Create a new repository]
+		
+	Creamos un repositorio.
+	
+			repository name, Description, [*] Public,  [*] Initialize this repository with a README
+			
+		[Creating repository]	
+		
+	[] Get Github Copilot business in this organization 	
+			NO SELECCIONAR
+			
+	[ok] Ihereby accept .....
+
+	[next]
+
+	Crear un repositorio para la organización
+	
+		https://github.com/miRepositorioGit/Modulo2_S1.git
+		
+		
+		echo "# Modulo2_S1" >> README.md
+		git init
+		git add README.md
+		git commit -m "first commit"
+		git branch -M master
+		git remote add origin https://github.com/miRepositorioGit/Modulo2_S1.git
+		git push -u origin master
+		
+		
+		git remote add origin https://github.com/miRepositorioGit/Modulo2_S1.git
+		git branch -M master
+		git push -u origin master
+
+
+
+Referencia
+https://www.youtube.com/watch?v=kT15YZwxw50	
